@@ -1,0 +1,6 @@
+framework module Pods_Spotflock {
+  umbrella header "Pods-Spotflock-umbrella.h"
+
+  export *
+  module * { export * }
+}

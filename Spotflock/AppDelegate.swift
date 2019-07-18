@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Spotflock
 //
-//  Created by Naveenkrishna Manda on 17/07/19.
-//  Copyright © 2019 Naveenkrishna Manda. All rights reserved.
+//  Created by Krish on 17/07/19.
+//  Copyright © 2019 Krish. All rights reserved.
 //
 
 import UIKit
