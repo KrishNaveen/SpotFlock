@@ -130,18 +130,13 @@ class SearviceManager {
     
     func fetchFeed(from urlString: String? = nil, completion: @escaping (_ stream: StreamData) -> Void) {
         guard let urlRequest = createURLRequest(for: .feed, body: "") else { return }
-        sendRequest(urlRequest) { [unowned self] (data, response, responseError) in
+        sendRequest(urlRequest) { (data, response, responseError) in
             guard response?.isSuccess ?? false,
                 let data = data else { return }
             
             do {
                 let streamData = try JSONDecoder().decode(StreamData.self, from: data)
                 completion(streamData)
-                //                if let url = streamData.kstream.next_page_url {
-                //                    self.fetchFeed(from: url, completion: { (streamData) in
-                //                        completion(streamData)
-                //                    })
-                //                }
             } catch {
                 print(error)
             }

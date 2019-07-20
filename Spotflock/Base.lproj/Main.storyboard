@@ -26,7 +26,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="eyO-Wt-Qvq"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="mnaveen1031@gmail.com" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N0x-Bs-TWD">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N0x-Bs-TWD">
                                 <rect key="frame" x="87.5" y="217.5" width="200" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -37,7 +37,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="akjshdlaks" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BEx-3C-clC">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BEx-3C-clC">
                                 <rect key="frame" x="87.5" y="267.5" width="200" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -269,7 +269,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FEEDCELL" textLabel="lLr-Df-lze" detailTextLabel="ReZ-4l-1PK" style="IBUITableViewCellStyleSubtitle" id="fPc-gX-8OG" customClass="FeedCell" customModule="Spotflock" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FEEDCELL" textLabel="lLr-Df-lze" detailTextLabel="ReZ-4l-1PK" style="IBUITableViewCellStyleSubtitle" id="fPc-gX-8OG">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fPc-gX-8OG" id="Mpw-mU-hB3">
@@ -303,7 +303,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="wNL-Bm-nVY" firstAttribute="top" secondItem="Ly2-iz-9uN" secondAttribute="top" id="cNA-94-E2l"/>
-                            <constraint firstItem="wNL-Bm-nVY" firstAttribute="bottom" secondItem="Ly2-iz-9uN" secondAttribute="bottom" id="keh-zy-i8S"/>
+                            <constraint firstItem="wNL-Bm-nVY" firstAttribute="bottom" secondItem="C5P-ab-yeF" secondAttribute="bottom" id="keh-zy-i8S"/>
                             <constraint firstItem="wNL-Bm-nVY" firstAttribute="trailing" secondItem="Ly2-iz-9uN" secondAttribute="trailing" id="lTi-nq-u2q"/>
                             <constraint firstItem="wNL-Bm-nVY" firstAttribute="leading" secondItem="Ly2-iz-9uN" secondAttribute="leading" id="lVC-Bt-Lgz"/>
                         </constraints>
@@ -510,7 +510,7 @@
                             <constraint firstItem="EaR-Mk-dyi" firstAttribute="top" secondItem="ldr-ah-4la" secondAttribute="top" constant="10" id="PuB-yb-dtF"/>
                             <constraint firstItem="JtH-Jm-9FE" firstAttribute="leading" secondItem="ldr-ah-4la" secondAttribute="leading" constant="10" id="Y6M-zc-pSM"/>
                             <constraint firstItem="aLs-1N-32s" firstAttribute="top" secondItem="EaR-Mk-dyi" secondAttribute="bottom" constant="10" id="cr2-sh-vme"/>
-                            <constraint firstItem="ldr-ah-4la" firstAttribute="bottom" secondItem="Up1-DG-pNH" secondAttribute="bottom" constant="10" id="dSd-n5-Q2h"/>
+                            <constraint firstAttribute="bottom" secondItem="Up1-DG-pNH" secondAttribute="bottom" constant="10" id="dSd-n5-Q2h"/>
                             <constraint firstItem="JtH-Jm-9FE" firstAttribute="top" secondItem="ldr-ah-4la" secondAttribute="top" constant="10" id="fkt-mL-OMr"/>
                             <constraint firstItem="Up1-DG-pNH" firstAttribute="top" secondItem="JtH-Jm-9FE" secondAttribute="bottom" constant="10" id="gnH-ef-Gi4"/>
                             <constraint firstItem="aLs-1N-32s" firstAttribute="leading" secondItem="JtH-Jm-9FE" secondAttribute="trailing" constant="10" id="n08-wb-Mvw"/>

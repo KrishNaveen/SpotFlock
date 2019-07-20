@@ -44,9 +44,6 @@ class FeedViewController: UIViewController {
             guard let strongSelf = self else { return }
             strongSelf.streamData = streamData
             strongSelf.feeds.append(contentsOf: streamData.kstream.data)
-            onMainQueue {
-                //                strongSelf.tableView.reloadData()
-            }
         })
     }
     
@@ -119,7 +116,4 @@ extension FeedViewController: UITableViewDataSource, UITableViewDelegate {
         let feedDetails = segue.destination as! FeedDetailsViewController
         feedDetails.feed = selectedFeed
     }
-}
-
-class FeedCell: UITableViewCell {
 }
