@@ -39,6 +39,7 @@ struct AppConstants {
     static let invalidResponseError = "Invalid Response"
     
     static let segueKeyToNavigateFeeds = "showFeed"
+    static let segueKeyToNavigateFeedDetails = "showFeedDetails"
     
     static let loginMessage = "Logging in..."
     static let registerProgressMessage = "Registering..."

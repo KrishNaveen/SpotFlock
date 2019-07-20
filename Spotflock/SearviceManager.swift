@@ -51,8 +51,8 @@ class SearviceManager {
         return UserDefaults.standard.string(forKey: AppConstants.tokenDefaultsKey)
     }
     
-    fileprivate func createURLRequest(for service: ServiceType, body: String) -> URLRequest? {
-        guard let url = URL(string: service.url) else { return nil }
+    fileprivate func createURLRequest(for service: ServiceType, body: String, urlString: String? = nil) -> URLRequest? {
+        guard let url = URL(string: urlString ?? service.url) else { return nil }
         var request = URLRequest(url: url)
         request.httpBody = body.data(using: .utf8)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -111,7 +111,7 @@ class SearviceManager {
                     if response?.isSuccess ?? false,let message = dict?[AppConstants.messageKey] as? String {
                         completion(message, true)
                     } else {
-                       
+                        
                         completion(self.parseErrorMessage(from: dict), false)
                     }
                     print(dict as Any)
@@ -128,9 +128,23 @@ class SearviceManager {
         task.resume()
     }
     
-    func fetchFeed() {
+    func fetchFeed(from urlString: String? = nil, completion: @escaping (_ stream: StreamData) -> Void) {
         guard let urlRequest = createURLRequest(for: .feed, body: "") else { return }
-        sendRequest(urlRequest) { (data, response, error) in
+        sendRequest(urlRequest) { [unowned self] (data, response, responseError) in
+            guard response?.isSuccess ?? false,
+                let data = data else { return }
+            
+            do {
+                let streamData = try JSONDecoder().decode(StreamData.self, from: data)
+                completion(streamData)
+                //                if let url = streamData.kstream.next_page_url {
+                //                    self.fetchFeed(from: url, completion: { (streamData) in
+                //                        completion(streamData)
+                //                    })
+                //                }
+            } catch {
+                print(error)
+            }
         }
     }
     
@@ -141,5 +155,13 @@ class SearviceManager {
             return value.first!
         }
         return AppConstants.invalidResponseError
+    }
+    
+    func cancelAllRequests() {
+        URLSession.shared.getAllTasks { (tasks) in
+            for task in tasks {
+                task.cancel()
+            }
+        }
     }
 }
